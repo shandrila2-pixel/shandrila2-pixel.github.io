@@ -1,37 +1,8 @@
-Every software project ends up needing documentation, and writing HTML by hand does not scale. Documentation generators take plain text files, API descriptions, or code comments and turn them into a finished site: a home page, a navigation sidebar, a search box, and one page per function, endpoint, or concept. The output is usually static HTML, which means the finished site can be hosted anywhere and keeps working even if the tool that made it disappears. That fits the indie web idea of owning your own output instead of renting it from somebody else's dashboard.
-
-This page lists the common options, what each one is good at, and a few notes for people who host their own sites.
-
-== The common tools ==
-
-[https://www.mkdocs.org MkDocs] reads a folder of Markdown files plus a small YAML file and builds a clean site with full text search. It is a common choice for project handbooks and internal guides. [https://squidfunk.github.io/mkdocs-material/ Material for MkDocs], a popular theme, adds versioning and blog features on top.
-
-[https://docusaurus.io Docusaurus] comes from the React world. It builds versioned documentation with a built in blog and translations, and it fits teams that are already comfortable with JavaScript tooling.
-
-[https://www.sphinx-doc.org Sphinx] is the oldest of the Python family and still powers the documentation of Python itself. It uses reStructuredText, its autodoc feature pulls descriptions straight out of your code, and its extension ecosystem runs deep.
-
-[https://www.doxygen.nl Doxygen] scans C and C++ source code and produces reference pages from the comments inside the code. It is old, quirky, and everywhere in embedded and systems work.
-
-[https://vitepress.dev VitePress] is a newer option from the Vue ecosystem, focused on very fast sites and Markdown pages with Vue components embedded in the text.
-
-[https://sourcey.com/oss Sourcey] takes a different angle. Instead of one input format it accepts several: OpenAPI files, MCP server descriptions, Doxygen XML, godoc, rustdoc JSON, and plain Markdown, and it renders all of them into one static site with search, dark mode, and an llms.txt file for machine readers. For a project whose documentation lives in several formats at once, say a REST API plus a C library plus some guides, one build step covers the whole set.
-
-== Choosing between them ==
-
-Most choices come down to the source material. A Python project with docstrings wants Sphinx. A C project wants Doxygen. A team writing Markdown wants MkDocs, Docusaurus, or VitePress. A project with mixed sources, or one that wants reference pages and guides in the same build, is where the multi format tools earn their keep.
-
-One more consideration has appeared in the last two years: machine readers. Agents and coding assistants increasingly read project documentation to answer questions, and they do better with plain Markdown and text indexes than with rendered pages full of scripts. Several generators now ship an llms.txt file alongside the HTML for exactly this reason.
-
-== Hosting on your own domain ==
-
-All of these tools emit static files, so hosting is the easy part. Any static host or a plain web server works. GitHub Pages, Cloudflare Pages, and Netlify are the usual free starting points, and moving later is a folder copy. If you care about owning your output, generate the site and keep the HTML in your own repository, so the published copy never depends on the tool that made it.
-
-== Why this matters here ==
-
-Project documentation has quietly become part of personal sites again. A developer who maintains a small library often wants the docs to live next to their blog instead of on somebody else's platform, both for the links and for the principle of it. Static generators make that practical: the docs rebuild in seconds, deploy to the same domain as the rest of your site, and stay readable for people and for machines.
-
-== See also ==
-
-* [https://indieweb.org/static_site Static site]
-* [https://indieweb.org/llms.txt llms.txt]
-
+<!doctype html>
+<html>
+<head><title>shandrila</title></head>
+<body>
+<h1>shandrila</h1>
+<p>Personal site of <a href="https://github.com/shandrila2-pixel" rel="me">shandrila2-pixel</a>.</p>
+</body>
+</html>
